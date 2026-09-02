@@ -3,1792 +3,435 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>nanadurianpremium | ทุเรียนหมอนทอง</title>
+<meta name="google-site-verification" content="VUwxRlBaeewED9dJqXhMmGf0jEO67mQveUqXlS51nzA" />
+<title>นานาทุเรียนฟรีเมี่ยม | ทุเรียนหมอนทองคัดเกรดพรีเมียม สดจากสวน</title>
+<meta name="description" content="นานาทุเรียนฟรีเมี่ยม จำหน่ายทุเรียนหมอนทอง ทุเรียนกวน ทุเรียนทอด คัดเกรดพรีเมียม สดใหม่ หอม หวาน มัน สั่งซื้อออนไลน์ส่งฟรีทั่วประเทศ">
+<meta name="keywords" content="นานาทุเรียนฟรีเมี่ยม, ทุเรียนหมอนทอง, ทุเรียนกวน, ทุเรียนทอด, ทุเรียนพรีเมียม, ซื้อทุเรียนออนไลน์, ร้านขายทุเรียน,นานาทุเรียนพัทยา">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 /* =====================================================
    RESET
 ===================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
 body{
     font-family:'Kanit',sans-serif;
     background:#fff9dc;
     color:#244b18;
     overflow-x:hidden;
 }
-
-button,
-input,
-textarea,
-select{
-    font-family:inherit;
-}
-
+button, input, textarea, select{ font-family:inherit; }
 
 /* =====================================================
    LOADING
 ===================================================== */
-
 .loader{
-    position:fixed;
-    inset:0;
-
-    background:#063c1c;
-
-    z-index:99999;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-
-    color:white;
-
-    transition:opacity .7s;
+    position:fixed; inset:0; background:#063c1c; z-index:99999;
+    display:flex; align-items:center; justify-content:center;
+    flex-direction:column; color:white; transition:opacity .7s;
 }
-
 .loader-icon{
-    font-size:90px;
-    animation:bounce 1s infinite alternate;
+    font-size:90px; animation:bounce 1s infinite alternate;
 }
-
-.loader h2{
-    margin-top:15px;
-}
-
+.loader h2{ margin-top:15px; }
 @keyframes bounce{
-
-    from{
-        transform:translateY(0) rotate(-5deg);
-    }
-
-    to{
-        transform:translateY(-25px) rotate(5deg);
-    }
-
+    from{ transform:translateY(0) rotate(-5deg); }
+    to{ transform:translateY(-25px) rotate(5deg); }
 }
-
 
 /* =====================================================
    NAVBAR
 ===================================================== */
-
 nav{
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:72px;
-
-    background:rgba(3,61,27,.96);
-
-    backdrop-filter:blur(15px);
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 5%;
-
-    z-index:5000;
-
-    box-shadow:
-        0 4px 20px rgba(0,0,0,.25);
+    position:fixed; top:0; left:0; width:100%; height:72px;
+    background:rgba(3,61,27,.96); backdrop-filter:blur(15px);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 5%; z-index:5000; box-shadow:0 4px 20px rgba(0,0,0,.25);
 }
-
 .logo{
-    text-decoration:none;
-
-    color:#ffe02c;
-
-    font-size:25px;
-
-    font-weight:800;
-
-    line-height:1;
-
-    text-shadow:
-        3px 3px 0 #745200;
+    text-decoration:none; color:#ffe02c; font-size:25px;
+    font-weight:800; line-height:1; text-shadow:3px 3px 0 #745200;
+    display: flex; align-items: center; gap: 10px;
 }
-
 .nav-logo{
-    width:58px;
-    height:58px;
-    object-fit:contain;
-    display:block;
-    border-radius:12px;
-    background:white;
+    width:48px; height:48px; object-fit:contain; display:block;
+    border-radius:12px; background:white;
 }
-.logo small{
-    display:block;
-
-    color:white;
-
-    font-size:11px;
-
-    text-align:center;
-
-    margin-top:4px;
-
-    text-shadow:none;
+.logo-text small{
+    display:block; color:white; font-size:11px;
+    text-shadow:none; margin-top: 2px;
 }
+.menu{ list-style:none; display:flex; gap:25px; }
+.menu a{ color:white; text-decoration:none; transition:.3s; }
+.menu a:hover{ color:#ffe02c; }
 
-.menu{
-    list-style:none;
-
-    display:flex;
-
-    gap:25px;
+/* Nav Controls (Cart + Hamburger) */
+.nav-controls { display: flex; align-items: center; gap: 15px; }
+.menu-toggle {
+    display: none; background: none; border: none;
+    color: white; font-size: 28px; cursor: pointer;
 }
-
-.menu a{
-    color:white;
-
-    text-decoration:none;
-
-    transition:.3s;
-}
-
-.menu a:hover{
-    color:#ffe02c;
-}
-
 
 /* =====================================================
    CART BUTTON
 ===================================================== */
-
 .cart-button{
-
-    border:none;
-
-    background:#ffd72b;
-
-    color:#254b16;
-
-    font-size:18px;
-
-    font-weight:800;
-
-    padding:10px 18px;
-
-    border-radius:30px;
-
-    cursor:pointer;
-
-    box-shadow:
-        0 5px 0 #b78b00;
-
-    transition:.2s;
+    border:none; background:#ffd72b; color:#254b16; font-size:16px;
+    font-weight:800; padding:8px 15px; border-radius:30px;
+    cursor:pointer; box-shadow:0 5px 0 #b78b00; transition:.2s;
+    display: flex; align-items: center;
 }
-
-.cart-button:hover{
-    transform:translateY(-3px);
-}
-
+.cart-button:hover{ transform:translateY(-3px); }
 .cart-count{
-
-    display:inline-flex;
-
-    width:25px;
-    height:25px;
-
-    align-items:center;
-    justify-content:center;
-
-    background:#e93621;
-
-    color:white;
-
-    border-radius:50%;
-
-    font-size:14px;
-
-    margin-left:5px;
+    display:inline-flex; width:22px; height:22px;
+    align-items:center; justify-content:center; background:#e93621;
+    color:white; border-radius:50%; font-size:12px; margin-left:8px;
 }
-
 
 /* =====================================================
    HERO
 ===================================================== */
-
 .hero{
-
-    min-height:760px;
-
-    padding:
-        140px
-        7%
-        80px;
-
-    background:
-        linear-gradient(rgba(0,45,20,.55),rgba(0,45,20,.62)),
-        url("https://github.com/Tong114455/nana/blob/main/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87.jpg?raw=true") center/cover no-repeat;
-
-    position:relative;
-
-    overflow:hidden;
+    min-height:760px; padding:140px 7% 80px;
+    background: linear-gradient(rgba(0,45,20,.55),rgba(0,45,20,.62)),
+                url("https://github.com/Tong114455/nana/blob/main/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87.jpg?raw=true") center/cover no-repeat;
+    position:relative; overflow:hidden;
 }
-
 .hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-    height:700px;
-
-    border-radius:50%;
-
-    background:
-        rgba(255,235,60,.13);
-
-    right:-200px;
-    top:50px;
-
-    animation:
-        pulse 4s infinite;
+    content:""; position:absolute; width:700px; height:700px;
+    border-radius:50%; background:rgba(255,235,60,.13);
+    right:-200px; top:50px; animation:pulse 4s infinite;
 }
-
 @keyframes pulse{
-
-    50%{
-        transform:scale(1.15);
-        opacity:.5;
-    }
-
+    50%{ transform:scale(1.15); opacity:.5; }
 }
-
 .hero-content{
-
-    max-width:1250px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:30px;
-
-    align-items:center;
-
-    position:relative;
-
-    z-index:2;
+    max-width:1250px; margin:auto; display:grid;
+    grid-template-columns:1fr 1fr; gap:30px; align-items:center;
+    position:relative; z-index:2;
 }
-
 .badge{
-
-    display:inline-block;
-
-    background:#ffe32c;
-
-    color:#285616;
-
-    padding:10px 20px;
-
-    border-radius:30px;
-
-    font-weight:800;
-
-    box-shadow:
-        5px 5px 0 #b98900;
-
-    transform:rotate(-2deg);
-
+    display:inline-block; background:#ffe32c; color:#285616;
+    padding:10px 20px; border-radius:30px; font-weight:800;
+    box-shadow:5px 5px 0 #b98900; transform:rotate(-2deg);
 }
-
 .hero h1{
-
-    color:white;
-
-    font-size:
-        clamp(
-            55px,
-            7vw,
-            100px
-        );
-
-    line-height:.95;
-
-    font-weight:800;
-
-    margin-top:20px;
-
-    text-shadow:
-        5px 5px 0 #236b18,
-        9px 9px 0 #173d13;
+    color:white; font-size:clamp(45px, 6vw, 100px);
+    line-height:.95; font-weight:800; margin-top:20px;
+    text-shadow:5px 5px 0 #236b18, 9px 9px 0 #173d13;
 }
-
-.hero h1 span{
-    color:#ffe12e;
-}
-
-.hero p{
-
-    color:white;
-
-    font-size:22px;
-
-    margin:25px 0;
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-}
-
+.hero h1 span{ color:#ffe12e; }
+.hero p{ color:white; font-size:20px; margin:25px 0; }
+.hero-buttons{ display:flex; gap:15px; flex-wrap:wrap; }
 .btn{
-
-    display:inline-block;
-
-    padding:14px 25px;
-
-    border-radius:40px;
-
-    text-decoration:none;
-
-    border:none;
-
-    font-size:18px;
-
-    font-weight:800;
-
-    cursor:pointer;
-
-    transition:.3s;
+    display:inline-block; padding:12px 20px; border-radius:40px;
+    text-decoration:none; border:none; font-size:16px; font-weight:800;
+    cursor:pointer; transition:.3s;
 }
-
-.btn:hover{
-
-    transform:
-        translateY(-5px)
-        scale(1.03);
-}
-
-.green{
-
-    background:#22d45e;
-
-    color:white;
-
-    box-shadow:
-        0 7px 0 #0b8734;
-}
-
-.yellow{
-
-    background:#ffd72b;
-
-    color:#5b4500;
-
-    box-shadow:
-        0 7px 0 #b78900;
-}
-
-.blue{
-
-    background:#4285f4;
-
-    color:white;
-
-    box-shadow:
-        0 7px 0 #205bb2;
-}
-
-
-/* =====================================================
-   HERO DURIAN
-===================================================== */
-
-.hero-durian{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    position:relative;
-}
-
-.durian{
-
-    font-size:280px;
-
-    filter:
-        drop-shadow(
-            0 25px 25px
-            rgba(0,0,0,.35)
-        );
-
-    animation:
-        durianFloat 4s infinite;
-}
-
+.btn:hover{ transform:translateY(-5px) scale(1.03); }
+.green{ background:#22d45e; color:white; box-shadow:0 7px 0 #0b8734; }
+.yellow{ background:#ffd72b; color:#5b4500; box-shadow:0 7px 0 #b78900; }
+.blue{ background:#4285f4; color:white; box-shadow:0 7px 0 #205bb2; }
+.hero-durian{ display:flex; justify-content:center; align-items:center; position:relative; }
+.durian{ font-size:280px; filter:drop-shadow(0 25px 25px rgba(0,0,0,.35)); animation:durianFloat 4s infinite; }
 @keyframes durianFloat{
-
-    0%,100%{
-        transform:
-            translateY(0)
-            rotate(-3deg);
-    }
-
-    50%{
-        transform:
-            translateY(-25px)
-            rotate(3deg);
-    }
-
+    0%,100%{ transform:translateY(0) rotate(-3deg); }
+    50%{ transform:translateY(-25px) rotate(3deg); }
 }
-
-.mascot{display:none}
-
-
 
 /* =====================================================
    HOME IMAGE SLIDER
 ===================================================== */
 .home-slider{
-    width:min(1100px,100%);
-    margin:40px auto 0;
-    position:relative;
-    border-radius:30px;
-    overflow:hidden;
-    background:#dff2b2;
-    border:5px solid rgba(255,255,255,.8);
-    box-shadow:0 20px 45px rgba(0,0,0,.22);
+    width:min(1100px,100%); margin:40px auto 0; position:relative;
+    border-radius:30px; overflow:hidden; background:#dff2b2;
+    border:5px solid rgba(255,255,255,.8); box-shadow:0 20px 45px rgba(0,0,0,.22);
 }
-.home-slides{display:flex;transition:transform .6s ease;}
+.home-slides{ display:flex; transition:transform .6s ease; }
 .home-slide{
-    min-width:100%;height:360px;position:relative;
-    display:flex;align-items:center;justify-content:center;overflow:hidden;
+    min-width:100%; height:360px; position:relative;
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
 }
 .home-slide:nth-child(1){background:linear-gradient(135deg,#b8df86,#fff0a4);}
 .home-slide:nth-child(2){background:linear-gradient(135deg,#e9f5b4,#f6c66c);}
 .home-slide:nth-child(3){background:linear-gradient(135deg,#9bd49a,#ffe08a);}
 .home-slide:nth-child(4){background:linear-gradient(135deg,#c6e3a0,#f3b65d);}
-.slide-art{
-    width:240px;height:240px;border-radius:42% 58% 45% 55%;
-    background:linear-gradient(135deg,#86a83b,#486f20);
-    position:relative;transform:rotate(-8deg);
-    box-shadow:0 25px 30px rgba(0,0,0,.2);border:8px solid #36591a;
-}
-.slide-art:before{
-    content:"";position:absolute;inset:28px;border-radius:50%;
-    background:#ffe27a;border:6px solid #d9b54a;transform:rotate(8deg);
-}
-.slide-art:after{
-    content:"";position:absolute;width:55px;height:18px;background:#65411f;
-    border-radius:20px;top:-20px;left:95px;
-}
-.slide-copy{
-    position:absolute;left:7%;bottom:28px;background:rgba(3,61,27,.86);
-    color:white;padding:14px 22px;border-radius:18px;font-weight:700;font-size:20px;
-}
-.slider-dots{position:absolute;bottom:16px;right:22px;display:flex;gap:8px;}
+.slider-dots{ position:absolute; bottom:16px; right:22px; display:flex; gap:8px; }
 .slider-dot{
-    width:12px;height:12px;border:2px solid white;background:rgba(255,255,255,.45);
-    border-radius:50%;cursor:pointer;
+    width:12px; height:12px; border:2px solid white; background:rgba(255,255,255,.45);
+    border-radius:50%; cursor:pointer;
 }
-.slider-dot.active{background:#ffe02c;}
-.slide-upload{position:absolute;top:18px;right:18px;z-index:3;background:white;color:#315d1c;padding:8px 12px;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 5px 15px rgba(0,0,0,.15);}
-.slide-upload input{display:none;}
-.slide-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;}
-.slide-photo.visible{display:block;z-index:1;}
-.slide-photo + .slide-art{position:relative;z-index:1;}
-.slider-note{text-align:center;margin-top:12px;color:rgba(255,255,255,.88);font-size:14px;}
-
-/* DURIAN ART ICON */
-.durian-art{
-    width:110px;height:90px;margin:10px auto;position:relative;
-    background:linear-gradient(145deg,#a8c94c,#507c24);
-    clip-path:polygon(50% 0%,58% 13%,72% 5%,75% 20%,91% 18%,86% 34%,100% 43%,87% 54%,96% 68%,79% 68%,76% 86%,61% 77%,50% 100%,39% 77%,23% 86%,21% 68%,4% 68%,13% 54%,0% 43%,14% 34%,9% 18%,25% 20%,28% 5%,42% 13%);
-    filter:drop-shadow(0 10px 10px rgba(0,0,0,.18));
-}
-.durian-art:after{
-    content:"";position:absolute;width:46px;height:58px;left:32px;top:18px;
-    background:#ffe47b;border-radius:50% 50% 45% 45%;
-    box-shadow:inset 0 0 0 5px #d3ad43;
-}
-.products{
-    background:
-      radial-gradient(circle at 10% 10%,rgba(121,170,61,.16) 0 55px,transparent 56px),
-      radial-gradient(circle at 90% 20%,rgba(255,206,67,.18) 0 75px,transparent 76px),
-      linear-gradient(180deg,#f5fbd9,#fff9dc);
-}
+.slider-dot.active{ background:#ffe02c; }
+.slide-photo{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:none; }
+.slide-photo.visible{ display:block; z-index:1; }
 
 /* =====================================================
-   SECTIONS
+   SECTIONS & PRODUCTS
 ===================================================== */
-
-section{
-    padding:85px 6%;
-}
-
-.title{
-
-    text-align:center;
-
-    margin-bottom:45px;
-}
-
-.title h2{
-
-    font-size:46px;
-
-    color:#287219;
-
-    font-weight:800;
-}
-
-.title p{
-
-    color:#777;
-
-    font-size:18px;
-}
-
-
-/* =====================================================
-   PRODUCTS
-===================================================== */
-
-.products{
-
-    background:#fff9dc;
-}
-
-.product-grid{
-
-    max-width:1250px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(5,1fr);
-
-    gap:20px;
-}
-
+section{ padding:85px 6%; }
+.title{ text-align:center; margin-bottom:45px; }
+.title h2{ font-size:40px; color:#287219; font-weight:800; }
+.title p{ color:#777; font-size:18px; margin-top:10px; }
+.products{ background:#fff9dc; }
+.product-grid{ max-width:1250px; margin:auto; display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
 .product{
-
-    background:white;
-
-    border:
-        4px solid #d7eb91;
-
-    border-radius:25px;
-
-    padding:18px;
-
-    text-align:center;
-
-    box-shadow:
-        0 10px 25px
-        rgba(0,0,0,.1);
-
-    transition:.4s;
-
-    position:relative;
-
-    overflow:hidden;
+    background:white; border:4px solid #d7eb91; border-radius:25px;
+    padding:18px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s; position:relative; overflow:hidden;
 }
-
-.product:hover{
-
-    transform:
-        translateY(-12px)
-        rotate(-1deg);
-
-    border-color:#ffd72b;
-
-    box-shadow:
-        0 20px 35px
-        rgba(38,108,20,.25);
-}
-
-.product-image{
-
-    font-size:90px;
-
-    padding:15px;
-
-    animation:
-        miniFloat 3s infinite;
-}
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    border-radius:18px;
-}
-
-@keyframes miniFloat{
-
-    50%{
-        transform:translateY(-8px);
-    }
-
-}
-
-.product h3{
-
-    font-size:25px;
-}
-
-.product-description{
-
-    color:#777;
-
-    min-height:55px;
-
-    margin:5px 0;
-}
-
-.product-price{
-
-    color:#e99600;
-
-    font-size:25px;
-
-    font-weight:800;
-
-    margin:10px;
-}
-
-
-/* KG SELECTOR */
-
-.kg-selector{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
-
-    margin:10px 0;
-}
-
+.product:hover{ transform:translateY(-12px) rotate(-1deg); border-color:#ffd72b; box-shadow:0 20px 35px rgba(38,108,20,.25); }
+.product-image{ padding:10px; height:180px; display:flex; justify-content:center; align-items:center; }
+.product-image img{ width:100%; height:100%; object-fit:contain; border-radius:18px; }
+.product h3{ font-size:22px; margin-top:10px; }
+.product-description{ color:#777; min-height:55px; margin:5px 0; font-size:14px; }
+.product-price{ color:#e99600; font-size:22px; font-weight:800; margin:10px; }
+.product-unit{ font-size:13px; color:#555; margin-bottom:10px; }
+.kg-selector{ display:flex; align-items:center; justify-content:center; gap:8px; margin:10px 0; }
 .kg-selector button{
-
-    width:34px;
-    height:34px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#d9ef9d;
-
-    color:#245516;
-
-    font-size:20px;
-
-    font-weight:800;
-
-    cursor:pointer;
+    width:34px; height:34px; border:none; border-radius:50%;
+    background:#d9ef9d; color:#245516; font-size:20px; font-weight:800; cursor:pointer;
 }
-
 .kg-selector input{
-
-    width:65px;
-
-    text-align:center;
-
-    border:
-        2px solid #cfe38c;
-
-    border-radius:10px;
-
-    padding:7px;
-
-    font-size:17px;
-
-    font-weight:700;
+    width:60px; text-align:center; border:2px solid #cfe38c;
+    border-radius:10px; padding:7px; font-size:16px; font-weight:700;
 }
-
 .add-cart{
-
-    width:100%;
-
-    border:none;
-
-    background:#25c653;
-
-    color:white;
-
-    padding:11px;
-
-    border-radius:25px;
-
-    font-weight:800;
-
-    cursor:pointer;
-
-    transition:.3s;
+    width:100%; border:none; background:#25c653; color:white;
+    padding:11px; border-radius:25px; font-weight:800; cursor:pointer; transition:.3s;
 }
-
-.add-cart:hover{
-
-    background:#159e3d;
-
-    transform:scale(1.03);
-}
-
+.add-cart:hover{ background:#159e3d; transform:scale(1.03); }
 
 /* =====================================================
-   BENEFITS
+   BENEFITS, PROMO, REVIEWS, CONTACT
 ===================================================== */
-
-.benefits{
-
-    background:#effbd0;
-}
-
-.benefit-grid{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:25px;
-}
-
-.benefit{
-
-    background:white;
-
-    padding:30px 20px;
-
-    border-radius:30px;
-
-    text-align:center;
-
-    box-shadow:
-        0 10px 20px
-        rgba(0,0,0,.08);
-}
-
-.benefit-icon{
-
-    font-size:55px;
-
-    margin-bottom:10px;
-}
-
-
-/* =====================================================
-   PROMOTION
-===================================================== */
-
-.promo{
-
-    background:
-        linear-gradient(
-            135deg,
-            #f8b500,
-            #ff6c18
-        );
-
-    color:white;
-}
-
-.promo-grid{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:20px;
-}
-
+.benefits{ background:#effbd0; }
+.benefit-grid{ max-width:1100px; margin:auto; display:grid; grid-template-columns:repeat(4,1fr); gap:25px; }
+.benefit{ background:white; padding:30px 20px; border-radius:30px; text-align:center; box-shadow:0 10px 20px rgba(0,0,0,.08); }
+.benefit-icon{ font-size:50px; margin-bottom:10px; }
+.promo{ background:linear-gradient(135deg,#f8b500,#ff6c18); color:white; }
+.promo-grid{ max-width:1100px; margin:auto; display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 .promo-card{
-
-    padding:35px;
-
-    border-radius:30px;
-
-    text-align:center;
-
-    background:
-        rgba(255,255,255,.16);
-
-    border:
-        3px solid
-        rgba(255,255,255,.7);
-
-    backdrop-filter:blur(10px);
-
-    transition:.3s;
+    padding:30px; border-radius:30px; text-align:center;
+    background:rgba(255,255,255,.16); border:3px solid rgba(255,255,255,.7);
+    backdrop-filter:blur(10px); transition:.3s;
 }
-
-.promo-card:hover{
-
-    transform:scale(1.04);
-}
-
-.promo-icon{
-
-    font-size:65px;
-}
-
-.promo-card strong{
-
-    display:block;
-
-    font-size:35px;
-
-    color:#fff700;
-}
-
-
-/* =====================================================
-   CART OVERLAY
-===================================================== */
-
-.overlay{
-
-    position:fixed;
-
-    inset:0;
-
-    background:
-        rgba(0,0,0,.55);
-
-    z-index:8000;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.3s;
-}
-
-.overlay.active{
-
-    opacity:1;
-
-    visibility:visible;
-}
-
-
-/* =====================================================
-   CART PANEL
-===================================================== */
-
-.cart-panel{
-
-    position:fixed;
-
-    top:0;
-    right:0;
-
-    width:
-        min(500px,100%);
-
-    height:100vh;
-
-    background:#fffdf0;
-
-    z-index:9000;
-
-    transform:
-        translateX(100%);
-
-    transition:.4s;
-
-    display:flex;
-
-    flex-direction:column;
-
-    box-shadow:
-        -10px 0 30px
-        rgba(0,0,0,.2);
-}
-
-.cart-panel.active{
-
-    transform:
-        translateX(0);
-}
-
-.cart-header{
-
-    padding:20px;
-
-    background:#063c1c;
-
-    color:white;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-}
-
-.cart-header h2{
-
-    color:#ffe02b;
-}
-
-.close-cart{
-
-    border:none;
-
-    background:none;
-
-    color:white;
-
-    font-size:30px;
-
-    cursor:pointer;
-}
-
-.cart-body{
-
-    flex:1;
-
-    overflow-y:auto;
-
-    padding:20px;
-}
-
-
-/* =====================================================
-   CART ITEM
-===================================================== */
-
-.cart-item{
-
-    background:white;
-
-    border:
-        2px solid #dceba8;
-
-    border-radius:18px;
-
-    padding:15px;
-
-    margin-bottom:15px;
-
-    display:grid;
-
-    grid-template-columns:
-        65px 1fr;
-
-    gap:12px;
-}
-
-.cart-item-image{
-
-    font-size:50px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-}
-
-.cart-item h4{
-
-    font-size:19px;
-}
-
-.cart-item-price{
-
-    color:#e99a00;
-
-    font-weight:800;
-}
-
-.cart-controls{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    margin-top:7px;
-}
-
-.cart-controls button{
-
-    width:30px;
-    height:30px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#dff0a6;
-
-    cursor:pointer;
-
-    font-weight:800;
-}
-
-.remove{
-
-    margin-left:auto;
-
-    background:#ffdddd !important;
-
-    color:#d22 !important;
-}
-
-
-/* =====================================================
-   CHECKOUT
-===================================================== */
-
-.checkout{
-
-    padding:20px;
-
-    border-top:
-        1px solid #ddd;
-
-    background:white;
-}
-
-.summary{
-
-    background:#f1f8d9;
-
-    border-radius:18px;
-
-    padding:15px;
-
-    margin-bottom:15px;
-}
-
-.summary-row{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    margin:7px 0;
-}
-
-.summary-total{
-
-    border-top:
-        2px dashed #b6ca76;
-
-    margin-top:10px;
-
-    padding-top:10px;
-
-    font-size:22px;
-
-    font-weight:800;
-
-    color:#267018;
-}
-
-
-/* =====================================================
-   FORM
-===================================================== */
-
-.form-group{
-
-    margin-bottom:12px;
-}
-
-.form-group label{
-
-    display:block;
-
-    font-weight:700;
-
-    margin-bottom:4px;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select{
-
-    width:100%;
-
-    border:
-        2px solid #d5e49c;
-
-    border-radius:12px;
-
-    padding:11px;
-
-    font-size:16px;
-
-    outline:none;
-
-    background:white;
-}
-
-.form-group input:focus,
-.form-group textarea:focus{
-
-    border-color:#55a92f;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(85,169,47,.12);
-}
-
-.form-group textarea{
-
-    min-height:80px;
-
-    resize:vertical;
-}
-
-
-/* =====================================================
-   ORDER BUTTON
-===================================================== */
-
-.line-order{
-
-    width:100%;
-
-    border:none;
-
-    padding:15px;
-
-    border-radius:30px;
-
-    background:#25d366;
-
-    color:white;
-
-    font-size:19px;
-
-    font-weight:800;
-
-    cursor:pointer;
-
-    box-shadow:
-        0 6px 0 #159a46;
-
-    transition:.2s;
-}
-
-.line-order:hover{
-
-    transform:
-        translateY(-3px);
-}
-
-.copy-note{
-
-    text-align:center;
-
-    color:#777;
-
-    font-size:13px;
-
-    margin-top:8px;
-}
-
-
-/* =====================================================
-   REVIEWS
-===================================================== */
-
-.reviews{
-
-    background:white;
-}
-
-.review-grid{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:25px;
-}
-
-.review{
-
-    padding:30px;
-
-    background:#fffbed;
-
-    border:
-        2px solid #e4efb1;
-
-    border-radius:25px;
-}
-
-.stars{
-
-    color:#ffc400;
-
-    font-size:25px;
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact{
-
-    background:
-        linear-gradient(
-            135deg,
-            #efffc8,
-            #fff6c9
-        );
-}
-
-.contact-grid{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:30px;
-}
-
+.promo-card:hover{ transform:scale(1.04); }
+.promo-icon{ font-size:60px; }
+.promo-card strong{ display:block; font-size:30px; color:#fff700; }
+.reviews{ background:white; }
+.review-grid{ max-width:1100px; margin:auto; display:grid; grid-template-columns:repeat(3,1fr); gap:25px; }
+.review{ padding:30px; background:#fffbed; border:2px solid #e4efb1; border-radius:25px; }
+.stars{ color:#ffc400; font-size:25px; }
+.contact{ background:linear-gradient(135deg,#efffc8,#fff6c9); }
+.contact-grid{ max-width:1100px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:30px; }
 .contact-card{
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:30px;
-
-    border:
-        4px solid #d9ef91;
-
-    text-align:center;
-
-    box-shadow:
-        0 15px 30px
-        rgba(40,100,20,.12);
+    background:white; padding:35px; border-radius:30px;
+    border:4px solid #d9ef91; text-align:center; box-shadow:0 15px 30px rgba(40,100,20,.12);
 }
-
-.contact-icon{
-
-    font-size:75px;
-}
-
-.contact-card h3{
-
-    font-size:30px;
-
-    color:#287219;
-
-    margin:10px;
-}
-
-.contact-buttons{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:12px;
-
-    margin-top:20px;
-}
-
+.contact-icon{ font-size:65px; }
+.contact-card h3{ font-size:28px; color:#287219; margin:10px; }
+.contact-buttons{ display:flex; flex-direction:column; gap:12px; margin-top:20px; }
 
 /* =====================================================
-   FOOTER
+   CART & OVERLAY
 ===================================================== */
-
-footer{
-
-    background:#032b16;
-
-    color:white;
-
-    padding:50px 7% 25px;
+.overlay{
+    position:fixed; inset:0; background:rgba(0,0,0,.55);
+    z-index:8000; opacity:0; visibility:hidden; transition:.3s;
 }
-
-.footer-grid{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        2fr 1fr 1fr 1fr;
-
-    gap:40px;
+.overlay.active{ opacity:1; visibility:visible; }
+.cart-panel{
+    position:fixed; top:0; right:0; width:min(450px,100%); height:100vh;
+    background:#fffdf0; z-index:9000; transform:translateX(100%);
+    transition:.4s; display:flex; flex-direction:column; box-shadow:-10px 0 30px rgba(0,0,0,.2);
 }
-
-footer h3{
-
-    color:#ffe02b;
-
-    margin-bottom:12px;
+.cart-panel.active{ transform:translateX(0); }
+.cart-header{ padding:20px; background:#063c1c; color:white; display:flex; justify-content:space-between; align-items:center; }
+.cart-header h2{ color:#ffe02b; font-size: 22px; }
+.close-cart{ border:none; background:none; color:white; font-size:30px; cursor:pointer; }
+.cart-body{ flex:1; overflow-y:auto; padding:20px; }
+.cart-item{
+    background:white; border:2px solid #dceba8; border-radius:18px;
+    padding:15px; margin-bottom:15px; display:grid; grid-template-columns:60px 1fr; gap:12px;
 }
-
-footer a{
-
-    color:#c8d8ca;
-
-    text-decoration:none;
-
-    line-height:2;
+.cart-item-image{ font-size:45px; display:flex; align-items:center; justify-content:center; }
+.cart-item h4{ font-size:18px; margin-bottom:5px; }
+.cart-item-price{ color:#e99a00; font-weight:800; font-size: 14px; }
+.cart-controls{ display:flex; align-items:center; gap:7px; margin-top:7px; }
+.cart-controls button{
+    width:28px; height:28px; border:none; border-radius:50%;
+    background:#dff0a6; cursor:pointer; font-weight:800;
 }
-
-footer a:hover{
-
-    color:#ffe02b;
-}
-
-.copyright{
-
-    border-top:
-        1px solid #275438;
-
-    margin-top:35px;
-
-    padding-top:20px;
-
-    text-align:center;
-
-    color:#91ad97;
-}
-
+.remove{ margin-left:auto; background:#ffdddd !important; color:#d22 !important; }
 
 /* =====================================================
-   FLOATING LINE
+   CHECKOUT FORM
 ===================================================== */
+.checkout{ padding:20px; border-top:1px solid #ddd; background:white; }
+.summary{ background:#f1f8d9; border-radius:18px; padding:15px; margin-bottom:15px; }
+.summary-row{ display:flex; justify-content:space-between; margin:5px 0; }
+.summary-total{ border-top:2px dashed #b6ca76; margin-top:10px; padding-top:10px; font-size:20px; font-weight:800; color:#267018; }
+.form-group{ margin-bottom:10px; }
+.form-group label{ display:block; font-weight:700; margin-bottom:4px; font-size: 14px;}
+.form-group input, .form-group textarea, .form-group select{
+    width:100%; border:2px solid #d5e49c; border-radius:12px;
+    padding:10px; font-size:15px; outline:none; background:white;
+}
+.form-group input:focus, .form-group textarea:focus{ border-color:#55a92f; box-shadow:0 0 0 3px rgba(85,169,47,.12); }
+.form-group textarea{ min-height:60px; resize:vertical; }
+.line-order{
+    width:100%; border:none; padding:12px; border-radius:30px;
+    background:#25d366; color:white; font-size:18px; font-weight:800;
+    cursor:pointer; box-shadow:0 6px 0 #159a46; transition:.2s; margin-top:10px;
+}
+.line-order:hover{ transform:translateY(-3px); }
+.copy-note{ text-align:center; color:#777; font-size:12px; margin-top:8px; }
 
+/* =====================================================
+   FOOTER & FLOAT LINE
+===================================================== */
+footer{ background:#032b16; color:white; padding:50px 7% 25px; }
+.footer-grid{ max-width:1200px; margin:auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; }
+footer h3{ color:#ffe02b; margin-bottom:12px; }
+footer a{ color:#c8d8ca; text-decoration:none; line-height:2; }
+footer a:hover{ color:#ffe02b; }
+.copyright{ border-top:1px solid #275438; margin-top:35px; padding-top:20px; text-align:center; color:#91ad97; font-size:14px; }
 .float-line{
-
-    position:fixed;
-
-    right:20px;
-
-    bottom:20px;
-
-    z-index:4000;
-
-    background:#25d366;
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:800;
-
-    padding:14px 22px;
-
-    border-radius:50px;
-
-    box-shadow:
-        0 8px 25px
-        rgba(0,0,0,.3);
-
-    animation:
-        linePulse 2s infinite;
+    position:fixed; right:20px; bottom:20px; z-index:4000;
+    background:#25d366; color:white; text-decoration:none;
+    font-weight:800; padding:12px 20px; border-radius:50px;
+    box-shadow:0 8px 25px rgba(0,0,0,.3); animation:linePulse 2s infinite;
 }
-
 @keyframes linePulse{
-
-    0%,100%{
-        box-shadow:
-            0 0 0 0
-            rgba(37,211,102,.5);
-    }
-
-    50%{
-        box-shadow:
-            0 0 0 15px
-            rgba(37,211,102,0);
-    }
-
+    0%,100%{ box-shadow:0 0 0 0 rgba(37,211,102,.5); }
+    50%{ box-shadow:0 0 0 15px rgba(37,211,102,0); }
 }
-
 
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE (MOBILE OPTIMIZATION)
 ===================================================== */
-
 @media(max-width:1050px){
-
-    .menu{
-        display:none;
+    .menu-toggle { display: block; } /* Show hamburger */
+    .menu {
+        position: absolute; top: 72px; left: 0; width: 100%;
+        background: rgba(3,61,27,.98); flex-direction: column;
+        align-items: center; padding: 20px 0; gap: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.3s ease-in-out;
     }
-
-    .hero-content{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .product-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .benefit-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .promo-grid{
-        grid-template-columns:1fr;
-    }
-
-    .review-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:
-            1fr 1fr;
-    }
-
+    .menu.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    .hero-content{ grid-template-columns:1fr; text-align:center; }
+    .hero-buttons{ justify-content:center; }
+    .hero::before{ right:50%; transform:translateX(50%); top:-100px; }
+    .product-grid{ grid-template-columns:repeat(2,1fr); }
+    .benefit-grid{ grid-template-columns:repeat(2,1fr); }
+    .promo-grid{ grid-template-columns:1fr; }
+    .review-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
 }
 
 @media(max-width:600px){
-    .home-slide{height:260px;}
-    .slide-upload{font-size:12px;padding:6px 9px;}
-    .slide-art{width:170px;height:170px;}
-    .slide-copy{left:4%;right:4%;bottom:18px;font-size:15px;text-align:center;padding:10px 14px;}
-
-
-    nav{
-        height:65px;
-    }
-
-    .logo{
-        font-size:18px;
-    }
-
-    .cart-button{
-        font-size:14px;
-        padding:8px 12px;
-    }
-
-    .hero{
-        padding-top:110px;
-    }
-
-    .hero h1{
-        font-size:50px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .durian{
-        font-size:180px;
-    }
-
-    .product-grid{
-        grid-template-columns:1fr;
-    }
-
-    .benefit-grid{
-        grid-template-columns:1fr;
-    }
-
-    .title h2{
-        font-size:36px;
-    }
-
-    .contact-card{
-        padding:25px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
+    section { padding: 50px 5%; } /* ลด Padding บนมือถือ */
+    nav{ height:65px; }
+    .menu { top: 65px; }
+    .logo-text{ display: none; } /* ซ่อนชื่อยาวๆ ให้เหลือแต่โลโก้บนมือถือเล็ก */
+    .cart-button{ font-size:14px; padding:6px 12px; }
+    .hero{ padding-top:100px; min-height: auto; }
+    .hero h1{ font-size:clamp(35px, 9vw, 50px); }
+    .hero p{ font-size:16px; margin: 15px 0; }
+    .durian{ font-size:180px; }
+    .home-slide{ height:220px; }
+    .product-grid{ grid-template-columns:1fr; }
+    .benefit-grid{ grid-template-columns:1fr; }
+    .title h2{ font-size:30px; }
+    .title p{ font-size: 15px; }
+    .contact-card{ padding:25px; }
+    .footer-grid{ grid-template-columns:1fr; text-align:center; gap: 25px; }
+    .cart-panel { width: 100%; } /* ให้ตะกร้าเต็มจอพอดี */
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =====================================================
-     LOADER
-===================================================== -->
-
 <div class="loader" id="loader">
-
     <div class="loader-icon"></div>
-
-    <h2>
-        กำลังเข้าสู่สวนทุเรียน...
-    </h2>
-
+    <h2>กำลังเข้าสู่สวนทุเรียน...</h2>
 </div>
 
-
-<!-- =====================================================
-     NAV
-===================================================== -->
-
 <nav>
-
     <a href="#home" class="logo">
-
-        <img src="https://github.com/Tong114455/nana/blob/main/%E0%B9%82%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B9%89.jpg?raw=true" alt="โลโก้nanadurianpremium" class="nav-logo">
-
-        <small>
-            nanadurianpremium
-        </small>
-
+        <img src="https://github.com/Tong114455/nana/blob/main/%E0%B9%82%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B9%89.jpg?raw=true" alt="โลโก้นานาทุเรียนฟรีเมี่ยม ร้านทุเรียน" class="nav-logo">
+        <div class="logo-text">
+            นานาทุเรียน<small>ฟรีเมี่ยม</small>
+        </div>
     </a>
-
-
-    <ul class="menu">
-
-        <li>
-            <a href="#home">
-                หน้าแรก
-            </a>
-        </li>
-
-        <li>
-            <a href="#products">
-                ทุเรียน
-            </a>
-        </li>
-
-        <li>
-            <a href="#promo">
-                โปรโมชั่น
-            </a>
-        </li>
-
-        <li>
-            <a href="#contact">
-                ติดต่อ
-            </a>
-        </li>
-
+    
+    <ul class="menu" id="navMenu">
+        <li><a href="#home" onclick="toggleMenu()">หน้าแรก</a></li>
+        <li><a href="#products" onclick="toggleMenu()">ทุเรียน</a></li>
+        <li><a href="#promo" onclick="toggleMenu()">โปรโมชั่น</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">ติดต่อ</a></li>
     </ul>
 
-
-    <button
-        class="cart-button"
-        onclick="openCart()">
-
-        🛒 ตะกร้า
-
-        <span
-            class="cart-count"
-            id="cartCount">
-
-            0
-
-        </span>
-
-    </button>
-
+    <div class="nav-controls">
+        <button class="cart-button" onclick="openCart()">
+            🛒 ตะกร้า <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
 </nav>
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section
-    class="hero"
-    id="home">
-
-
+<section class="hero" id="home">
     <div class="hero-content">
-
-
         <div>
-
-            <div class="badge">
-
-                👑 ทุเรียนคัดพิเศษจากสวน
-
-            </div>
-
-
-            <h1>
-
-                nanadurianpremium<br>
-
-                <span>
-                    nanadurianpremium
-                </span>
-
-            </h1>
-
-
-            <p>
-
-                🌿 หอม มัน หวาน อร่อย
-
-                <br>
-
-                เลือกจำนวนกิโลได้
-                สั่งออนไลน์ง่าย ๆ
-
-            </p>
-
-
+            <div class="badge">👑 ทุเรียนคัดพิเศษจากสวน</div>
+            <h1>นานาทุเรียนฟรีเมี่ยม<br><span>ทุเรียนหมอนทองคัดเกรด</span></h1>
+            <p>🌿 นานาทุเรียนฟรีเมี่ยม หอม มัน หวาน อร่อย<br>เลือกจำนวนกิโลได้ สั่งออนไลน์ง่าย ๆ</p>
             <div class="hero-buttons">
-
-                <a
-                    href="#products"
-                    class="btn green">
-
-                    🛒 เลือกทุเรียน
-
-                </a>
-
-
-                <a
-                    href="https://lin.ee/nsVzyDO"
-                    target="_blank"
-                    class="btn green">
-
-                    💚 LINE ร้าน
-
-                </a>
-
+                <a href="#products" class="btn green">🛒 เลือกทุเรียน</a>
+                <a href="https://lin.ee/nsVzyDO" target="_blank" class="btn green">💚 LINE ร้าน</a>
             </div>
-
         </div>
-
-
         <div class="hero-durian">
-
             <div class="durian"></div>
-
-            <div class="mascot">
-                
-            </div>
-
         </div>
-
-
     </div>
 
     <div class="home-slider" aria-label="สไลด์รูปโปรโมชั่น">
         <div class="home-slides" id="homeSlides">
-            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/1.jpg?raw=true" alt="โปรโมชั่น nanadurianpremium รูปที่ 1"></div>
-            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/2.jpg?raw=true" alt="โปรโมชั่น nanadurianpremium รูปที่ 2"></div>
-            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/3.jpg?raw=true" alt="โปรโมชั่น nanadurianpremium รูปที่ 3"></div>
-            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/4.jpg?raw=true" alt="โปรโมชั่น nanadurianpremium รูปที่ 4"></div>
-            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/5.jpg?raw=true" alt="โปรโมชั่น nanadurianpremium รูปที่ 5"></div>
+            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/1.jpg?raw=true" alt="โปรโมชั่น นานาทุเรียนฟรีเมี่ยม รูปที่ 1"></div>
+            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/2.jpg?raw=true" alt="โปรโมชั่น นานาทุเรียนฟรีเมี่ยม รูปที่ 2"></div>
+            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/3.jpg?raw=true" alt="โปรโมชั่น นานาทุเรียนฟรีเมี่ยม รูปที่ 3"></div>
+            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/4.jpg?raw=true" alt="โปรโมชั่น นานาทุเรียนฟรีเมี่ยม รูปที่ 4"></div>
+            <div class="home-slide"><img class="slide-photo visible" src="https://github.com/Tong114455/nana/blob/main/5.jpg?raw=true" alt="โปรโมชั่น นานาทุเรียนฟรีเมี่ยม รูปที่ 5"></div>
         </div>
         <div class="slider-dots" id="sliderDots">
-            <button class="slider-dot" onclick="goSlide(1)" aria-label="รูปที่ 2"></button>
-            <button class="slider-dot" onclick="goSlide(2)" aria-label="รูปที่ 3"></button>
-            <button class="slider-dot" onclick="goSlide(3)" aria-label="รูปที่ 4"></button>
-            <button class="slider-dot" onclick="goSlide(4)" aria-label="รูปที่ 5"></button>
+            <button class="slider-dot active" onclick="goSlide(0)"></button>
+            <button class="slider-dot" onclick="goSlide(1)"></button>
+            <button class="slider-dot" onclick="goSlide(2)"></button>
+            <button class="slider-dot" onclick="goSlide(3)"></button>
+            <button class="slider-dot" onclick="goSlide(4)"></button>
         </div>
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     PRODUCTS
-===================================================== -->
-
-<section
-    class="products"
-    id="products">
-
-
+<section class="products" id="products">
     <div class="title">
-
-        <h2>
-            🌿 เลือกทุเรียนของคุณ
-        </h2>
-
-        <p>
-            เลือกจำนวนกิโลหรือจำนวนแพ็ค แล้วเพิ่มลงตะกร้าได้เลย • หมอนทองกรุณาโทรสอบถามราคา
-        </p>
-
+        <h2>🌿 เลือกทุเรียนของคุณ</h2>
+        <p>เลือกจำนวนกิโลหรือจำนวนแพ็ค แล้วเพิ่มลงตะกร้าได้เลย • หมอนทองกรุณาโทรสอบถามราคา</p>
     </div>
-
-
     <div class="product-grid">
-
-        <div class="product" data-id="monthong" data-name="ทุเรียนหมอนทอง" data-price="159" data-unit="กก.">
-            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87.jpg?raw=true" alt="ทุเรียนหมอนทอง"></div>
+        <div class="product" data-id="monthong">
+            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87.jpg?raw=true" alt="ทุเรียนหมอนทอง นานาทุเรียนฟรีเมี่ยม"></div>
             <h3>ทุเรียนหมอนทอง</h3>
-            <p class="product-description">
-            </p>
+            <p class="product-description"></p>
             <div class="product-price">฿99–฿320 / กก.</div>
             <div class="product-unit">โทรสอบถามราคาและน้ำหนักก่อนสั่งซื้อ</div>
             <div class="kg-selector">
@@ -1800,13 +443,10 @@ footer a:hover{
             <a class="add-cart" href="tel:0938608333" style="display:block;text-decoration:none;text-align:center;">📞 โทรสอบถามราคา</a>
         </div>
 
-        <div class="product" data-id="chanee" data-name="ทุเรียนทอด" data-price="100" data-unit="กก.">
-            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%94.jpg?raw=true" alt="ทุเรียนทอด"></div>
+        <div class="product" data-id="chanee">
+            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%94.jpg?raw=true" alt="ทุเรียนทอด นานาทุเรียนฟรีเมี่ยม"></div>
             <h3>ทุเรียนทอด</h3>
-            <p class="product-description">
-                ทุเรียนทอดกรอบ หอม อร่อย<br>
-                ราคา ฿1000
-            </p>
+            <p class="product-description">ทุเรียนทอดกรอบ หอม อร่อย<br>ราคา ฿1000</p>
             <div class="product-price">฿1000</div>
             <div class="kg-selector">
                 <button onclick="changeKg('chanee',-1)">−</button>
@@ -1814,16 +454,13 @@ footer a:hover{
                 <span>กก.</span>
                 <button onclick="changeKg('chanee',1)">+</button>
             </div>
-            <button class="add-cart" onclick="addToCart('chanee','ทุเรียนทอด',100,'กก.')">🛒 เพิ่มลงตะกร้า</button>
+            <button class="add-cart" onclick="addToCart('chanee','ทุเรียนทอด',1000,'กก.')">🛒 เพิ่มลงตะกร้า</button>
         </div>
 
-        <div class="product" data-id="kan_yaw" data-name="ทุเรียนแพ็ค" data-price="150" data-unit="แพ็ค">
-            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%84%E0%B8%A5%E0%B9%88%E0%B8%B0150.jpg?raw=true" alt="ทุเรียนแพ็ค"></div>
+        <div class="product" data-id="kan_yaw">
+            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%84%E0%B8%A5%E0%B9%88%E0%B8%B0150.jpg?raw=true" alt="ทุเรียนแพ็ค นานาทุเรียนฟรีเมี่ยม"></div>
             <h3>ทุเรียนแพ็ค</h3>
-            <p class="product-description">
-                ทุเรียนคัดแพ็คพร้อมรับประทาน<br>
-                แพ็คละ 150 บาท
-            </p>
+            <p class="product-description">ทุเรียนคัดแพ็คพร้อมรับประทาน<br>แพ็คละ 150 บาท</p>
             <div class="product-price">฿150 / แพ็ค</div>
             <div class="kg-selector">
                 <button onclick="changeKg('kan_yaw',-1)">−</button>
@@ -1834,14 +471,11 @@ footer a:hover{
             <button class="add-cart" onclick="addToCart('kan_yaw','ทุเรียนแพ็ค',150,'แพ็ค')">🛒 เพิ่มลงตะกร้า</button>
         </div>
 
-        <div class="product" data-id="puang_manee" data-name="ทุเรียนทอด (แพ็ค)" data-price="150" data-unit="แพ็ค">
-            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%94.jpg?raw=true" alt="ทุเรียนทอด"></div>
+        <div class="product" data-id="puang_manee">
+            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%94.jpg?raw=true" alt="ทุเรียนทอด นานาทุเรียนฟรีเมี่ยม"></div>
             <h3>ทุเรียนทอด</h3>
-            <p class="product-description">
-                ทุเรียนทอด ราคา 100 บาท<br>
-                แบบแพ็ค ราคา 150 บาท / แพ็ค
-            </p>
-            <div class="product-price">฿100–฿150</div>
+            <p class="product-description">ทุเรียนทอด ราคา 100 บาท<br>แบบแพ็ค ราคา 150 บาท / แพ็ค</p>
+            <div class="product-price">฿150</div>
             <div class="product-unit">แบบแพ็ค ฿150 / แพ็ค</div>
             <div class="kg-selector">
                 <button onclick="changeKg('puang_manee',-1)">−</button>
@@ -1852,13 +486,10 @@ footer a:hover{
             <button class="add-cart" onclick="addToCart('puang_manee','ทุเรียนทอด (แพ็ค)',150,'แพ็ค')">🛒 เพิ่มลงตะกร้า</button>
         </div>
 
-        <div class="product" data-id="musangking" data-name="ทุเรียนกวน" data-price="100" data-unit="แพ็ค">
-            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%81%E0%B8%A7%E0%B8%99.jpg?raw=true" alt="ทุเรียนกวน"></div>
+        <div class="product" data-id="musangking">
+            <div class="product-image"><img src="https://github.com/Tong114455/nana/blob/main/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%81%E0%B8%A7%E0%B8%99.jpg?raw=true" alt="ทุเรียนกวน นานาทุเรียนฟรีเมี่ยม"></div>
             <h3>ทุเรียนกวน</h3>
-            <p class="product-description">
-                หอมหวาน เนื้อเนียน<br>
-                ราคา 100 บาท
-            </p>
+            <p class="product-description">หอมหวาน เนื้อเนียน<br>ราคา 100 บาท</p>
             <div class="product-price">฿100 / แพ็ค</div>
             <div class="kg-selector">
                 <button onclick="changeKg('musangking',-1)">−</button>
@@ -1868,770 +499,135 @@ footer a:hover{
             </div>
             <button class="add-cart" onclick="addToCart('musangking','ทุเรียนกวน',100,'แพ็ค')">🛒 เพิ่มลงตะกร้า</button>
         </div>
-
     </div>
-
 </section>
-
-
-<!-- =====================================================
-     BENEFITS
-===================================================== -->
 
 <section class="benefits">
-
-
     <div class="title">
-
-        <h2>
-            💚 ทำไมต้องnanadurianpremium?
-        </h2>
-
+        <h2>💚 ทำไมต้องนานาทุเรียนฟรีเมี่ยม?</h2>
     </div>
-
-
     <div class="benefit-grid">
-
-
-        <div class="benefit">
-
-            <div class="benefit-icon">
-                👑
-            </div>
-
-            <h3>
-                คัดคุณภาพ
-            </h3>
-
-            <p>
-                คัดเลือกทุเรียนก่อนจัดส่ง
-            </p>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="benefit-icon">
-                🌳
-            </div>
-
-            <h3>
-                สดใหม่
-            </h3>
-
-            <p>
-                คัดสรรทุเรียนคุณภาพ
-            </p>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="benefit-icon">
-                🚚
-            </div>
-
-            <h3>
-                จัดส่ง
-            </h3>
-
-            <p>
-                แพ็กอย่างดีพร้อมจัดส่ง
-            </p>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="benefit-icon">
-                💚
-            </div>
-
-            <h3>
-                ดูแลลูกค้า
-            </h3>
-
-            <p>
-                สอบถามได้ตลอด
-            </p>
-
-        </div>
-
-
+        <div class="benefit"><div class="benefit-icon">👑</div><h3>คัดคุณภาพ</h3><p>คัดเลือกทุเรียนก่อนจัดส่ง</p></div>
+        <div class="benefit"><div class="benefit-icon">🌳</div><h3>สดใหม่</h3><p>คัดสรรทุเรียนคุณภาพ</p></div>
+        <div class="benefit"><div class="benefit-icon">🚚</div><h3>จัดส่ง</h3><p>แพ็กอย่างดีพร้อมจัดส่ง</p></div>
+        <div class="benefit"><div class="benefit-icon">💚</div><h3>ดูแลลูกค้า</h3><p>สอบถามได้ตลอด</p></div>
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     PROMOTION
-===================================================== -->
-
-<section
-    class="promo"
-    id="promo">
-
-
-    <div class="title">
-
-        <h2 style="color:white">
-            🎁 โปรโมชั่น
-        </h2>
-
-    </div>
-
-
+<section class="promo" id="promo">
+    <div class="title"><h2 style="color:white">🎁 โปรโมชั่น</h2></div>
     <div class="promo-grid">
-
-
-        <div class="promo-card">
-
-            <div class="promo-icon">
-                🚚
-            </div>
-
-            <h3>
-                ซื้อครบ 2,000 บาท
-            </h3>
-
-            <strong>
-                ส่งฟรี!
-            </strong>
-
-            <p>
-                ทั่วประเทศ
-            </p>
-
-        </div>
-
-
-        <div class="promo-card">
-
-            <div class="promo-icon">
-                🎁
-            </div>
-
-            <h3>
-                ซื้อครบ 3,500 บาท
-            </h3>
-
-            <strong>
-                แถมฟรี!
-            </strong>
-
-            <p>
-                เนื้อทุเรียน 200 กรัม
-            </p>
-
-        </div>
-
-
-        <div class="promo-card">
-
-            <div class="promo-icon">
-                🌿
-            </div>
-
-            <h3>
-                ซื้อครบ 5,000 บาท
-            </h3>
-
-            <strong>
-                แถมฟรี!
-            </strong>
-
-            <p>
-                หมอนทอง 1 ลูก
-            </p>
-
-        </div>
-
-
+        <div class="promo-card"><div class="promo-icon">🚚</div><h3>ซื้อครบ 2,000 บาท</h3><strong>ส่งฟรี!</strong><p>ทั่วประเทศ</p></div>
+        <div class="promo-card"><div class="promo-icon">🎁</div><h3>ซื้อครบ 3,500 บาท</h3><strong>แถมฟรี!</strong><p>เนื้อทุเรียน 200 กรัม</p></div>
+        <div class="promo-card"><div class="promo-icon">🌿</div><h3>ซื้อครบ 5,000 บาท</h3><strong>แถมฟรี!</strong><p>หมอนทอง 1 ลูก</p></div>
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     REVIEWS
-===================================================== -->
-
-<section
-    class="reviews"
-    id="reviews">
-
-
-    <div class="title">
-
-        <h2>
-            💖 รีวิวลูกค้า
-        </h2>
-
-    </div>
-
-
+<section class="reviews" id="reviews">
+    <div class="title"><h2>💖 รีวิวลูกค้า</h2></div>
     <div class="review-grid">
-
-
-        <div class="review">
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
-            <p>
-                “ทุเรียนหวานมาก
-                เนื้อแน่น แพ็กดีครับ”
-            </p>
-
-            <strong>
-                👨 คุณเอก
-            </strong>
-
-        </div>
-
-
-        <div class="review">
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
-            <p>
-                “ลูกใหญ่ เนื้อสวย
-                หอมมากค่ะ”
-            </p>
-
-            <strong>
-                👩 คุณแนน
-            </strong>
-
-        </div>
-
-
-        <div class="review">
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
-            <p>
-                “บริการดีมากครับ
-                รอบหน้าสั่งอีกแน่นอน”
-            </p>
-
-            <strong>
-                👨 คุณต้น
-            </strong>
-
-        </div>
-
-
+        <div class="review"><div class="stars">★★★★★</div><p>“ทุเรียนหวานมาก เนื้อแน่น แพ็กดีครับ”</p><strong>👨 คุณเอก</strong></div>
+        <div class="review"><div class="stars">★★★★★</div><p>“ลูกใหญ่ เนื้อสวย หอมมากค่ะ”</p><strong>👩 คุณแนน</strong></div>
+        <div class="review"><div class="stars">★★★★★</div><p>“บริการดีมากครับ รอบหน้าสั่งอีกแน่นอน”</p><strong>👨 คุณต้น</strong></div>
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section
-    class="contact"
-    id="contact">
-
-
-    <div class="title">
-
-        <h2>
-            📍 ติดต่อเรา
-        </h2>
-
-        <p>
-            nanadurianpremium
-        </p>
-
-    </div>
-
-
+<section class="contact" id="contact">
+    <div class="title"><h2>📍 ติดต่อเรา</h2><p>นานาทุเรียนฟรีเมี่ยม</p></div>
     <div class="contact-grid">
-
-
         <div class="contact-card">
-
-            <div class="contact-icon">
-                🌿
-            </div>
-
-
-            <h3>
-                nanadurianpremium
-            </h3>
-
-
-            <p>
-
-                🌿 nanadurianpremium
-
-                <br>
-
-                📞 093-860-8333
-
-            </p>
-
-
+            <div class="contact-icon">🌿</div>
+            <h3>นานาทุเรียนฟรีเมี่ยม</h3>
+            <p>🌿 นานาทุเรียนฟรีเมี่ยม<br>📞 093-860-8333</p>
             <div class="contact-buttons">
-
-
-                <a
-                    href="tel:0938608333"
-                    class="btn yellow">
-
-                    📞 โทร 093-860-8333
-
-                </a>
-
-
-                <a
-                    href="https://lin.ee/nsVzyDO"
-                    target="_blank"
-                    class="btn green">
-
-                    💚 LINE สั่งซื้อ
-
-                </a>
-
-
-                <a
-                    href="https://www.facebook.com/p/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B2-61582173297366/"
-                    target="_blank"
-                    class="btn blue">
-
-                    📘 Facebook
-
-                </a>
-
-
-                <a
-                    href="https://maps.app.goo.gl/yAeFKbHoQe4zQfmy8"
-                    target="_blank"
-                    class="btn blue">
-
-                    📍 Google Maps
-
-                </a>
-
-
+                <a href="tel:0938608333" class="btn yellow">📞 โทร 093-860-8333</a>
+                <a href="https://lin.ee/nsVzyDO" target="_blank" class="btn green">💚 LINE สั่งซื้อ</a>
+                <a href="https://www.facebook.com/p/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B2-61582173297366/" target="_blank" class="btn blue">📘 Facebook</a>
+                <a href="https://maps.app.goo.gl/yAeFKbHoQe4zQfmy8" target="_blank" class="btn blue">📍 Google Maps</a>
             </div>
-
         </div>
-
-
         <div class="contact-card">
-
-            <div class="contact-icon">
-                📦
-            </div>
-
-            <h3>
-                วิธีสั่งซื้อ
-            </h3>
-
-            <p>
-
-                1️⃣ เลือกทุเรียน
-
-                <br>
-
-                2️⃣ เลือกจำนวนกิโล
-
-                <br>
-
-                3️⃣ เพิ่มลงตะกร้า
-
-                <br>
-
-                4️⃣ กรอกข้อมูลจัดส่ง
-
-                <br>
-
-                5️⃣ กดสั่งซื้อผ่าน LINE
-
-            </p>
-
+            <div class="contact-icon">📦</div>
+            <h3>วิธีสั่งซื้อ</h3>
+            <p>1️⃣ เลือกทุเรียน<br>2️⃣ เลือกจำนวนกิโล<br>3️⃣ เพิ่มลงตะกร้า<br>4️⃣ กรอกข้อมูลจัดส่ง<br>5️⃣ กดสั่งซื้อผ่าน LINE</p>
         </div>
-
-
     </div>
-
 </section>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
-
-
     <div class="footer-grid">
-
-
         <div>
-
-            <h3>
-                🌿 nanadurianpremium
-            </h3>
-
-            <p>
-                ทุเรียนคุณภาพ
-                คัดพิเศษ
-            </p>
-
-            <p>
-                📞 093-860-8333
-            </p>
-
+            <h3>🌿 นานาทุเรียนฟรีเมี่ยม</h3>
+            <p>ทุเรียนคุณภาพ คัดพิเศษ</p>
+            <p>📞 093-860-8333</p>
         </div>
-
-
         <div>
-
-            <h3>
-                เมนู
-            </h3>
-
-            <p>
-
-                <a href="#home">
-                    หน้าแรก
-                </a>
-
-                <br>
-
-                <a href="#products">
-                    ทุเรียน
-                </a>
-
-                <br>
-
-                <a href="#promo">
-                    โปรโมชั่น
-                </a>
-
-                <br>
-
-                <a href="#contact">
-                    ติดต่อเรา
-                </a>
-
-            </p>
-
+            <h3>เมนู</h3>
+            <p><a href="#home">หน้าแรก</a><br><a href="#products">ทุเรียน</a><br><a href="#promo">โปรโมชั่น</a><br><a href="#contact">ติดต่อเรา</a></p>
         </div>
-
-
         <div>
-
-            <h3>
-                Social
-            </h3>
-
-            <p>
-
-                <a
-                    href="https://lin.ee/nsVzyDO"
-                    target="_blank">
-
-                    💚 LINE
-                </a>
-
-                <br>
-
-                <a
-                    href="https://www.facebook.com/p/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B2-61582173297366/"
-                    target="_blank">
-
-                    📘 Facebook
-
-                </a>
-
-            </p>
-
+            <h3>Social</h3>
+            <p><a href="https://lin.ee/nsVzyDO" target="_blank">💚 LINE</a><br><a href="https://www.facebook.com/p/%E0%B8%97%E0%B8%B8%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B2-61582173297366/" target="_blank">📘 Facebook</a></p>
         </div>
-
-
         <div>
-
-            <h3>
-                ร้าน
-            </h3>
-
-            <p>
-
-                <a
-                    href="https://maps.app.goo.gl/yAeFKbHoQe4zQfmy8"
-                    target="_blank">
-
-                    📍 Google Maps
-
-                </a>
-
-                <br>
-
-                📞 093-860-8333
-
-            </p>
-
+            <h3>ร้าน</h3>
+            <p><a href="https://maps.app.goo.gl/yAeFKbHoQe4zQfmy8" target="_blank">📍 Google Maps</a><br>📞 093-860-8333</p>
         </div>
-
-
     </div>
-
-
-    <div class="copyright">
-
-        © 2026 nanadurianpremium
-
-    </div>
-
-
+    <div class="copyright">© 2026 นานาทุเรียนฟรีเมี่ยม</div>
 </footer>
 
+<a href="https://lin.ee/nsVzyDO" target="_blank" class="float-line">💚 LINE ร้าน</a>
 
-<!-- =====================================================
-     FLOAT LINE
-===================================================== -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
 
-<a
-    href="https://lin.ee/nsVzyDO"
-    target="_blank"
-    class="float-line">
-
-    💚 LINE ร้าน
-
-</a>
-
-
-<!-- =====================================================
-     OVERLAY
-===================================================== -->
-
-<div
-    class="overlay"
-    id="overlay"
-    onclick="closeCart()">
-</div>
-
-
-<!-- =====================================================
-     CART PANEL
-===================================================== -->
-
-<div
-    class="cart-panel"
-    id="cartPanel">
-
-
+<div class="cart-panel" id="cartPanel">
     <div class="cart-header">
-
-        <h2>
-            🛒 ตะกร้าสินค้า
-        </h2>
-
-        <button
-            class="close-cart"
-            onclick="closeCart()">
-
-            ×
-
-        </button>
-
+        <h2>🛒 ตะกร้าสินค้า</h2>
+        <button class="close-cart" onclick="closeCart()">×</button>
     </div>
-
-
-    <div
-        class="cart-body"
-        id="cartBody">
-
-        <!-- JS -->
-
-    </div>
-
-
+    <div class="cart-body" id="cartBody"></div>
     <div class="checkout">
-
-
         <div class="summary">
-
-
-            <div class="summary-row">
-
-                <span>
-                    ค่าสินค้า
-                </span>
-
-                <strong id="subtotal">
-                    ฿0
-                </strong>
-
-            </div>
-
-
-            <div class="summary-row">
-
-                <span>
-                    ค่าส่ง
-                </span>
-
-                <strong id="shipping">
-                    ฿0
-                </strong>
-
-            </div>
-
-
-            <div class="summary-total">
-
-                <div class="summary-row">
-
-                    <span>
-                        รวมทั้งหมด
-                    </span>
-
-                    <strong id="total">
-                        ฿0
-                    </strong>
-
-                </div>
-
-            </div>
-
-
+            <div class="summary-row"><span>ค่าสินค้า</span><strong id="subtotal">฿0</strong></div>
+            <div class="summary-row"><span>ค่าส่ง</span><strong id="shipping">฿0</strong></div>
+            <div class="summary-total"><div class="summary-row"><span>รวมทั้งหมด</span><strong id="total">฿0</strong></div></div>
         </div>
-
-
+        <div class="form-group"><label>👤 ชื่อ-นามสกุล</label><input id="customerName" type="text" placeholder="กรอกชื่อของคุณ"></div>
+        <div class="form-group"><label>📞 เบอร์โทร</label><input id="customerPhone" type="tel" placeholder="กรอกเบอร์โทร"></div>
+        <div class="form-group"><label>📍 ที่อยู่จัดส่ง</label><textarea id="customerAddress" placeholder="บ้านเลขที่ ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์"></textarea></div>
         <div class="form-group">
-
-            <label>
-                👤 ชื่อ-นามสกุล
-            </label>
-
-            <input
-                id="customerName"
-                type="text"
-                placeholder="กรอกชื่อของคุณ">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                📞 เบอร์โทร
-            </label>
-
-            <input
-                id="customerPhone"
-                type="tel"
-                placeholder="กรอกเบอร์โทร">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                📍 ที่อยู่จัดส่ง
-            </label>
-
-            <textarea
-                id="customerAddress"
-                placeholder="บ้านเลขที่ ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์">
-            </textarea>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                🚚 วิธีจัดส่ง
-            </label>
-
+            <label>🚚 วิธีจัดส่ง</label>
             <select id="delivery">
-
-                <option value="normal">
-                    จัดส่งปกติ
-                </option>
-
-                <option value="pattaya">
-                    ส่งในพื้นที่พัทยา
-                </option>
-
+                <option value="normal">จัดส่งปกติ</option>
+                <option value="pattaya">ส่งในพื้นที่พัทยา</option>
             </select>
-
         </div>
-
-
-        <button
-            class="line-order"
-            onclick="sendOrder()">
-
-            💚 สั่งซื้อผ่าน LINE
-
-        </button>
-
-
-        <div class="copy-note">
-
-            ระบบจะสร้างข้อความออเดอร์
-            และคัดลอกให้อัตโนมัติ
-
-        </div>
-
-
+        <button class="line-order" onclick="sendOrder()">💚 สั่งซื้อผ่าน LINE</button>
+        <div class="copy-note">ระบบจะสร้างข้อความออเดอร์ และคัดลอกให้อัตโนมัติ</div>
     </div>
-
 </div>
-
 
 <script>
-
 /* =====================================================
    CONFIG
 ===================================================== */
-
-const LINE_URL =
-    "https://lin.ee/nsVzyDO";
-
-
-/*
-    ค่าส่งตัวอย่าง
-
-    ปรับได้ตามจริง
-*/
-
+const LINE_URL = "https://lin.ee/nsVzyDO";
 const SHIPPING_NORMAL = 150;
-
 const SHIPPING_PATTAYA = 80;
 
+/* =====================================================
+   MOBILE MENU TOGGLE
+===================================================== */
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
 
 /* =====================================================
    CART
 ===================================================== */
+let cart = JSON.parse(localStorage.getItem("durianCart")) || [];
 
-let cart =
-    JSON.parse(
-        localStorage.getItem("durianCart")
-    ) || [];
-
-
-/* =====================================================
-   QUANTITY SELECTOR
-===================================================== */
 function changeKg(id,change){
     const input=document.getElementById("kg-"+id);
     if(!input) return;
@@ -2639,14 +635,10 @@ function changeKg(id,change){
     input.value=Math.max(1,Math.min(100,value+change));
 }
 
-/* =====================================================
-   ADD CART
-===================================================== */
 function addToCart(id,name,price,unit="กก."){
     const input=document.getElementById("kg-"+id);
     const qty=input ? (parseInt(input.value)||1) : 1;
     const existing=cart.find(item=>item.id===id);
-
     if(existing){
         existing.qty=getQty(existing)+qty;
         existing.unit=unit;
@@ -2654,29 +646,15 @@ function addToCart(id,name,price,unit="กก."){
     }else{
         cart.push({id,name,price,qty,unit});
     }
-
     saveCart();
     updateCart();
     openCart();
 }
 
-/* =====================================================
-   SAVE CART
-===================================================== */
-
 function saveCart(){
-
-    localStorage.setItem(
-        "durianCart",
-        JSON.stringify(cart)
-    );
-
+    localStorage.setItem("durianCart", JSON.stringify(cart));
 }
 
-
-/* =====================================================
-   CART COUNT + UPDATE
-===================================================== */
 function getQty(item){ return Number(item.qty) || 1; }
 function getUnit(item){ return item.unit ?? "กก."; }
 
@@ -2688,12 +666,11 @@ function updateCartCount(){
 function updateCart(){
     updateCartCount();
     const body=document.getElementById("cartBody");
-
     if(cart.length===0){
         body.innerHTML=`
-            <div style="text-align:center;padding:60px 20px;color:#777;">
-                <div style="font-size:70px;">🌿</div>
-                <h3>ยังไม่มีสินค้า</h3>
+            <div style="text-align:center;padding:40px 10px;color:#777;">
+                <div style="font-size:60px;">🌿</div>
+                <h3 style="margin-top:10px;">ยังไม่มีสินค้า</h3>
                 <p>เลือกทุเรียนด้านบนเพื่อเพิ่มลงตะกร้า</p>
             </div>`;
     }else{
@@ -2711,7 +688,7 @@ function updateCart(){
                         <button onclick="changeCartKg(${index},1)">+</button>
                         <button class="remove" onclick="removeCart(${index})">🗑</button>
                     </div>
-                    <div style="margin-top:6px;font-weight:800;">
+                    <div style="margin-top:6px;font-weight:800;font-size:14px;">
                         รวม ฿${(item.price*qty).toLocaleString()}
                     </div>
                 </div>
@@ -2721,438 +698,104 @@ function updateCart(){
     calculateTotals();
 }
 
-/* =====================================================
-   CHANGE CART QUANTITY
-===================================================== */
 function changeCartKg(index,change){
     const item=cart[index];
     if(!item) return;
     item.qty=Math.max(1,Math.min(100,getQty(item)+change));
-    delete getQty(item);
-    saveCart();
-    updateCart();
+    saveCart(); updateCart();
 }
-
-/* =====================================================
-   REMOVE
-===================================================== */
 
 function removeCart(index){
-
-    cart.splice(
-        index,
-        1
-    );
-
-    saveCart();
-
-    updateCart();
-
+    cart.splice(index, 1);
+    saveCart(); updateCart();
 }
 
-
-/* =====================================================
-   SHIPPING
-===================================================== */
-
-function calculateShipping(
-    subtotal
-){
-
-    if(subtotal === 0){
-
-        return 0;
-
-    }
-
-
-    /*
-       ตัวอย่างโปรโมชั่น:
-
-       ซื้อครบ 2,000 บาท
-       ส่งฟรี
-    */
-
-    if(subtotal >= 2000){
-
-        return 0;
-
-    }
-
-
-    const delivery =
-        document.getElementById(
-            "delivery"
-        ).value;
-
-
-    if(delivery === "pattaya"){
-
-        return SHIPPING_PATTAYA;
-
-    }
-
-
+function calculateShipping(subtotal){
+    if(subtotal === 0) return 0;
+    if(subtotal >= 2000) return 0;
+    const delivery = document.getElementById("delivery").value;
+    if(delivery === "pattaya") return SHIPPING_PATTAYA;
     return SHIPPING_NORMAL;
-
 }
-
-
-/* =====================================================
-   TOTALS
-===================================================== */
 
 function calculateTotals(){
-
-    const subtotal =
-        cart.reduce(
-            (sum,item) =>
-                sum +
-                (
-                    item.price *
-                    getQty(item)
-                ),
-            0
-        );
-
-
-    const shipping =
-        calculateShipping(
-            subtotal
-        );
-
-
-    const total =
-        subtotal +
-        shipping;
-
-
-    document.getElementById(
-        "subtotal"
-    ).textContent =
-        "฿" +
-        subtotal.toLocaleString();
-
-
-    document.getElementById(
-        "shipping"
-    ).textContent =
-        shipping === 0
-            ? "ฟรี"
-            : "฿" +
-              shipping.toLocaleString();
-
-
-    document.getElementById(
-        "total"
-    ).textContent =
-        "฿" +
-        total.toLocaleString();
-
+    const subtotal = cart.reduce((sum,item) => sum + (item.price * getQty(item)), 0);
+    const shipping = calculateShipping(subtotal);
+    const total = subtotal + shipping;
+    
+    document.getElementById("subtotal").textContent = "฿" + subtotal.toLocaleString();
+    document.getElementById("shipping").textContent = shipping === 0 ? "ฟรี" : "฿" + shipping.toLocaleString();
+    document.getElementById("total").textContent = "฿" + total.toLocaleString();
 }
-
-
-/* =====================================================
-   OPEN CART
-===================================================== */
 
 function openCart(){
-
     updateCart();
-
-    document
-        .getElementById("cartPanel")
-        .classList.add("active");
-
-    document
-        .getElementById("overlay")
-        .classList.add("active");
-
+    document.getElementById("cartPanel").classList.add("active");
+    document.getElementById("overlay").classList.add("active");
 }
-
-
-/* =====================================================
-   CLOSE CART
-===================================================== */
 
 function closeCart(){
-
-    document
-        .getElementById("cartPanel")
-        .classList.remove("active");
-
-    document
-        .getElementById("overlay")
-        .classList.remove("active");
-
+    document.getElementById("cartPanel").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
 }
 
-
-/* =====================================================
-   DELIVERY CHANGE
-===================================================== */
-
-document
-    .getElementById("delivery")
-    .addEventListener(
-        "change",
-        calculateTotals
-    );
-
-
-/* =====================================================
-   CREATE ORDER MESSAGE
-===================================================== */
+document.getElementById("delivery").addEventListener("change", calculateTotals);
 
 function createOrderMessage(){
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
+    const address = document.getElementById("customerAddress").value.trim();
+    const delivery = document.getElementById("delivery").value;
+    const subtotal = cart.reduce((sum,item) => sum + item.price * getQty(item), 0);
+    const shipping = calculateShipping(subtotal);
+    const total = subtotal + shipping;
 
-    const name =
-        document
-        .getElementById(
-            "customerName"
-        )
-        .value.trim();
-
-
-    const phone =
-        document
-        .getElementById(
-            "customerPhone"
-        )
-        .value.trim();
-
-
-    const address =
-        document
-        .getElementById(
-            "customerAddress"
-        )
-        .value.trim();
-
-
-    const delivery =
-        document
-        .getElementById(
-            "delivery"
-        ).value;
-
-
-    const subtotal =
-        cart.reduce(
-            (sum,item) =>
-                sum +
-                item.price *
-                getQty(item),
-            0
-        );
-
-
-    const shipping =
-        calculateShipping(
-            subtotal
-        );
-
-
-    const total =
-        subtotal +
-        shipping;
-
-
-    let message =
-        "🌿 ออเดอร์ใหม่ - nanadurianpremium\n\n";
-
-
-    message +=
-        "👤 ชื่อลูกค้า: " +
-        name +
-        "\n";
-
-
-    message +=
-        "📞 เบอร์โทร: " +
-        phone +
-        "\n";
-
-
-    message +=
-        "📍 ที่อยู่: " +
-        address +
-        "\n";
-
-
-    message +=
-        "🚚 การจัดส่ง: " +
-        (
-            delivery === "pattaya"
-                ? "ส่งในพื้นที่พัทยา"
-                : "จัดส่งปกติ"
-        ) +
-        "\n\n";
-
-
-    message +=
-        "🛒 รายการสินค้า\n";
-
-
+    let message = "🌿 ออเดอร์ใหม่ - นานาทุเรียนฟรีเมี่ยม\n\n";
+    message += "👤 ชื่อลูกค้า: " + name + "\n";
+    message += "📞 เบอร์โทร: " + phone + "\n";
+    message += "📍 ที่อยู่: " + address + "\n";
+    message += "🚚 การจัดส่ง: " + (delivery === "pattaya" ? "ส่งในพื้นที่พัทยา" : "จัดส่งปกติ") + "\n\n";
+    message += "🛒 รายการสินค้า\n";
+    
     cart.forEach((item,index) => {
         const qty=getQty(item);
         const unit=getUnit(item);
-        message +=
-            (index + 1) + ". " + item.name + " " +
-            qty + " " + unit + " × ฿" +
-            item.price.toLocaleString() + " = ฿" +
-            (item.price * qty).toLocaleString() + "\n";
+        message += (index + 1) + ". " + item.name + " " + qty + " " + unit + " × ฿" + item.price.toLocaleString() + " = ฿" + (item.price * qty).toLocaleString() + "\n";
     });
 
-    message +=
-        "\n💰 ค่าสินค้า: ฿" +
-        subtotal.toLocaleString();
-
-
-    message +=
-        "\n🚚 ค่าส่ง: " +
-        (
-            shipping === 0
-                ? "ฟรี"
-                : "฿" +
-                  shipping.toLocaleString()
-        );
-
-
-    message +=
-        "\n💵 ยอดรวม: ฿" +
-        total.toLocaleString();
-
-
-    message +=
-        "\n\nขอแจ้งรายละเอียดการชำระเงินด้วยครับ/ค่ะ";
-
-
+    message += "\n💰 ค่าสินค้า: ฿" + subtotal.toLocaleString();
+    message += "\n🚚 ค่าส่ง: " + (shipping === 0 ? "ฟรี" : "฿" + shipping.toLocaleString());
+    message += "\n💵 ยอดรวม: ฿" + total.toLocaleString();
+    message += "\n\nขอแจ้งรายละเอียดการชำระเงินด้วยครับ/ค่ะ";
     return message;
-
 }
-
-
-/* =====================================================
-   SEND ORDER
-===================================================== */
 
 async function sendOrder(){
+    if(cart.length === 0){ alert("กรุณาเลือกสินค้าใส่ตะกร้าก่อนครับ"); return; }
+    
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
+    const address = document.getElementById("customerAddress").value.trim();
+    
+    if(!name){ alert("กรุณากรอกชื่อ-นามสกุล"); return; }
+    if(!phone){ alert("กรุณากรอกเบอร์โทร"); return; }
+    if(!address){ alert("กรุณากรอกที่อยู่จัดส่ง"); return; }
 
-    if(cart.length === 0){
-
-        alert(
-            "กรุณาเลือกสินค้าใส่ตะกร้าก่อนครับ"
-        );
-
-        return;
-
-    }
-
-
-    const name =
-        document
-        .getElementById(
-            "customerName"
-        )
-        .value.trim();
-
-
-    const phone =
-        document
-        .getElementById(
-            "customerPhone"
-        )
-        .value.trim();
-
-
-    const address =
-        document
-        .getElementById(
-            "customerAddress"
-        )
-        .value.trim();
-
-
-    if(!name){
-
-        alert(
-            "กรุณากรอกชื่อ-นามสกุล"
-        );
-
-        return;
-
-    }
-
-
-    if(!phone){
-
-        alert(
-            "กรุณากรอกเบอร์โทร"
-        );
-
-        return;
-
-    }
-
-
-    if(!address){
-
-        alert(
-            "กรุณากรอกที่อยู่จัดส่ง"
-        );
-
-        return;
-
-    }
-
-
-    const message =
-        createOrderMessage();
-
-
-    /*
-       พยายามคัดลอกข้อความ
-    */
-
+    const message = createOrderMessage();
     try{
-
-        await navigator.clipboard.writeText(
-            message
-        );
-
-        alert(
-            "สร้างออเดอร์เรียบร้อยแล้ว\n\n" +
-            "ข้อความออเดอร์ถูกคัดลอกแล้ว\n" +
-            "กดตกลงเพื่อเปิด LINE"
-        );
-
+        await navigator.clipboard.writeText(message);
+        alert("สร้างออเดอร์เรียบร้อยแล้ว\n\nข้อความออเดอร์ถูกคัดลอกแล้ว\nกดตกลงเพื่อเปิด LINE");
     }catch(error){
-
-        alert(
-            "สร้างออเดอร์เรียบร้อยแล้ว\n\n" +
-            "กรุณาคัดลอกข้อความออเดอร์หลังเปิด LINE"
-        );
-
+        alert("สร้างออเดอร์เรียบร้อยแล้ว\n\nกรุณาคัดลอกข้อความออเดอร์หลังเปิด LINE");
     }
-
-
-    /*
-       เปิด LINE OA
-    */
-
-    window.open(
-        LINE_URL,
-        "_blank"
-    );
-
+    window.open(LINE_URL, "_blank");
 }
-
 
 /* =====================================================
    HOME SLIDER
 ===================================================== */
 let currentSlide=0;
+const totalSlides=5;
 function goSlide(index){
     currentSlide=index;
     const slides=document.getElementById("homeSlides");
@@ -3162,53 +805,26 @@ function goSlide(index){
     });
 }
 setInterval(()=>{
-    currentSlide=(currentSlide+1)%4;
+    currentSlide=(currentSlide+1)%totalSlides;
     goSlide(currentSlide);
 },4500);
 
 /* =====================================================
    LOADING
 ===================================================== */
-
-window.addEventListener(
-    "load",
-    function(){
-
-        setTimeout(
-            function(){
-
-                const loader =
-                    document.getElementById(
-                        "loader"
-                    );
-
-                loader.style.opacity="0";
-
-                setTimeout(
-                    function(){
-
-                        loader.style.display=
-                            "none";
-
-                    },
-                    700
-                );
-
-            },
-            700
-        );
-
-    }
-);
-
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        const loader = document.getElementById("loader");
+        loader.style.opacity="0";
+        setTimeout(function(){ loader.style.display="none"; }, 700);
+    }, 700);
+});
 
 /* =====================================================
    INITIALIZE
 ===================================================== */
-
 updateCart();
 
 </script>
-
 </body>
 </html>
